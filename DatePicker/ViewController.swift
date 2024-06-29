@@ -26,24 +26,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeDatePicker(_ sender: UIDatePicker) {
-        let datePickerView = sender
+        let datePickerView = sender // 전달된 인수 저장
         
-        let formatter = DateFormatter()
+        let formatter = DateFormatter() // DateFormatter 클래스 상수 선언
         
         
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
 
-        lblPickerTime.text = "선택시간: " + formatter.string(from: datePickerView.date)
+        lblPickerTime.text = "선택시간: " + formatter.string(from: datePickerView.date) // 선택한 날짜를 형식에 맞게 문자열로 변환
         
         formatter.dateFormat = "hh:mm aaa"
         alarmTime = formatter.string(from: datePickerView.date)
         
     }
     
-    @objc func updateTime(){ // objective C와의 호환성을 위해 @objc를
+    @objc func updateTime(){ // objective C와의 호환성을 위해 @objc를 추가
 
         
-        let date = NSDate()
+        let date = NSDate() // 현재 시간을 가져옴
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
