@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let timeSelector: Selector = #selector(ViewController.updateTime)
-    let interval = 1.0
-    var count = 0
+    let timeSelector: Selector = #selector(ViewController.updateTime)   // 타이머가 구동되면 실행하는 함수
+    let interval = 1.0  // 타이머 간격 (1초)
+    var count = 0   // 타이머 간격 확인
     var alarmTime = ""
     
     @IBOutlet var lblCurrentTime: UILabel!
